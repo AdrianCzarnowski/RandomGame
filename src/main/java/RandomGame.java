@@ -21,12 +21,14 @@ public class RandomGame {
             }
 
             int tries = 4 - numberOfAttempts;
-            System.out.println(tries + " attempts you left");
-            System.out.println("Please try again");
-            if (userInput > numberToGuess)
-                System.out.println("Your number is GREATER than the one you are trying to guess");
-            else
-                System.out.println("Your number is LOWER than the one you are trying to guess");
+            if (tries > 0) {
+                    if (userInput > numberToGuess)
+                    System.out.println("Your number is GREATER than the one you are trying to guess");
+                    else
+                    System.out.println("Your number is LOWER than the one you are trying to guess");
+             System.out.println(tries + " attempts you left");
+             System.out.println("Please try again");
+            }
         }
 
         if (guessed)
